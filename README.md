@@ -31,10 +31,10 @@ El objetivo principal del proyecto es analizar la evolución y distribución del
 
 | Hipótesis | Enunciado | Resultado |
 |-----------|-----------|-----------|
-| H1 | Las grandes provincias tienen precios significativamente superiores | ✅ Parcialmente confirmada — Bizkaia y Gipuzkoa superan a Madrid y Barcelona |
+| H1 | Las grandes provincias tienen precios significativamente superiores | ⚠️ Parcialmente confirmada — Bizkaia y Gipuzkoa superan a Madrid y Barcelona |
 | H2 | Existe una desigualdad territorial clara entre comunidades autónomas | ✅ Confirmada — la brecha entre provincias caras y baratas es muy pronunciada |
 | H3 | El precio del alquiler ha aumentado progresivamente con los años | ✅ Confirmada — el índice de 2024 es el más alto de la serie histórica |
-| H4 | El tipo de vivienda influye en el precio del alquiler | ✅ Confirmada con matiz — la unifamiliar tiene mayor precio y variabilidad |
+| H4 | El tipo de vivienda influye en el precio del alquiler | ⚠️ Confirmada con matiz — la unifamiliar tiene mayor precio y variabilidad |
 
 ---
 
