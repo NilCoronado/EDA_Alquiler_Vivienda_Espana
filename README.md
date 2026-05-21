@@ -119,6 +119,6 @@ EDA_Alquiler_Vivienda_Espana/
 |---------|-----|-------------------|
 | Nil Coronado| Data Acquisition & Cleaning | Carga del dataset, limpieza, data dictionary |
 | Enrique Algarra | EDA & Visualización | Análisis exploratorio, gráficos, heatmaps |
-| Lucía Vetrano| Business Insights & Storytelling | Conclusiones, memoria del proyecto , presentación, vídeo |
+| Lucía Vetrano| Business Insights & Storytelling | Conclusiones, memoria del proyecto , presentación, guión del vídeo |
 
 ---
