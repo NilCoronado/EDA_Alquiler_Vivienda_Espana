@@ -11,15 +11,9 @@ El objetivo principal del proyecto es analizar la evolución y distribución del
 
 ---
 
-# 🎯 Objetivos del EDA
+## 🎯 Problem Statement
 
-## Objetivo General
-
-Analizar cómo varía el precio del alquiler en España según:
-- provincia,
-- municipio,
-- tipo de vivienda,
-- y evolución temporal.
+> *¿Qué variables explican mejor el precio del alquiler en España y cómo varían según la ubicación y el tipo de vivienda?*
 
 ---
 
@@ -33,150 +27,98 @@ Analizar cómo varía el precio del alquiler en España según:
 
 ---
 
-# 🧠 Hipótesis del Proyecto
+## 🧠 Hipótesis y Resultados
 
-## H1
-Las grandes provincias presentan precios de alquiler significativamente superiores.
-
-## H2
-Existe una desigualdad territorial clara entre comunidades autónomas.
-
-## H3
-El precio del alquiler ha aumentado progresivamente con el paso de los años.
-
-## H4
-El tipo de vivienda influye en el precio del alquiler.
+| Hipótesis | Enunciado | Resultado |
+|-----------|-----------|-----------|
+| H1 | Las grandes provincias tienen precios significativamente superiores | ✅ Parcialmente confirmada — Bizkaia y Gipuzkoa superan a Madrid y Barcelona |
+| H2 | Existe una desigualdad territorial clara entre comunidades autónomas | ✅ Confirmada — la brecha entre provincias caras y baratas es muy pronunciada |
+| H3 | El precio del alquiler ha aumentado progresivamente con los años | ✅ Confirmada — el índice de 2024 es el más alto de la serie histórica |
+| H4 | El tipo de vivienda influye en el precio del alquiler | ✅ Confirmada con matiz — la unifamiliar tiene mayor precio y variabilidad |
 
 ---
 
-# 📂 Dataset Utilizado
+## 📂 Dataset Utilizado
 
-## Fuente Oficial
-https://datos.gob.es/es/catalogo/e05233601-referencia-del-precio-del-alquiler-de-vivienda
-
-## Dataset principal
-`VDP001_01.csv`
+- **Fuente:** [datos.gob.es — Referencia del Precio del Alquiler de Vivienda](https://datos.gob.es/es/catalogo/e05233601-referencia-del-precio-del-alquiler-de-vivienda)
+- **Archivo principal:** `VDP001_01.csv`
+- **Período:** 2011–2024
+- **Cobertura:** todas las provincias y municipios de España
 
 ---
 
-# 📊 Variables Principales
+### 📊 Variables principales
 
 | Variable | Descripción |
-|---|---|
-| PROVINCIA | Provincia española |
-| NOMBRE_MUNICIPIO | Municipio |
-| COD_POSTAL | Código postal |
-| ELEMENTO | Tipo de métrica analizada |
-| TIPO_VIVIENDA | Tipo de vivienda |
-| TIPO_MEDIDA | Tipo estadístico |
-| AÑO | Año de referencia |
-| VALOR | Valor numérico del indicador |
+|----------|-------------|
+| `PROVINCIA` | Provincia española |
+| `NOMBRE_MUNICIPIO` | Nombre del municipio |
+| `COD_POSTAL` | Código postal |
+| `ELEMENTO` | Tipo de métrica analizada |
+| `TIPO_VIVIENDA` | Colectiva o Unifamiliar |
+| `TIPO_MEDIDA` | Tipo estadístico de la medida |
+| `AÑO` | Año de referencia |
+| `VALOR` | Índice de precio mediano |
+
+---
+##  Principales Hallazgos
+
+- **El índice de precio en 2024 es el más alto de toda la serie histórica**, superando incluso los valores previos a la crisis de 2008. La aceleración entre 2020 y 2024 es la más intensa del período analizado.
+- **Bizkaia (≈640) y Gipuzkoa (≈600) son las provincias más caras**, por encima de Madrid y Barcelona (≈510). Este es el hallazgo más sorprendente del análisis.
+- **La desigualdad territorial es enorme.** Las provincias del interior (Teruel, Ávila, Badajoz, Lugo) presentan índices que representan menos de la mitad de los valores del País Vasco.
+- **La vivienda unifamiliar sube más y llega más alto.** Desde 2019, el gap entre unifamiliar y colectiva se amplía, y los outliers de unifamiliar alcanzan valores de 2.200+ en 2024.
+- **La correlación entre año y precio es baja (r=0,19)**, lo que indica que la ubicación geográfica es el factor dominante, no el tiempo.
+- **Madrid y Barcelona destacan por su dispersión interna**: conviven municipios con precios moderados y zonas de lujo extremo dentro de la misma provincia.
 
 ---
 
-# 👥 División del Trabajo
+## 📁 Estructura del Repositorio
 
----
-
-# 👤 Persona 1 — Data Acquisition & Data Cleaning
-
-## Responsabilidades
-
-- Carga y validación del dataset
-- Limpieza de datos
-- Conversión de tipos
-- Tratamiento de valores nulos
-- Eliminación de duplicados
-- Estandarización de columnas
-- Creación del Data Dictionary
-- Exportación del dataset limpio
-
-## Entregables
-
-- Dataset limpio
-- Notebook de limpieza
-- Data Dictionary
-- Documentación del proceso
-
----
-
-# 👤 Persona 2 — Exploratory Data Analysis & Visualización
-
-## Responsabilidades
-
-- Análisis univariante
-- Análisis bivariante
-- Análisis multivariante
-- Creación de visualizaciones
-- Heatmaps
-- Boxplots
-- Scatterplots
-- Rankings territoriales
-- Evolución temporal
-
-## Entregables
-
-- Notebook de análisis
-- Visualizaciones finales
-- Gráficos para presentación
-
----
-
-# 👤 Persona 3 — Business Insights & Storytelling
-
-## Responsabilidades
-
-- Definición del enfoque de negocio
-- Interpretación de resultados
-- Extracción de insights
-- Conclusiones finales
-- Storytelling
-- Presentación del proyecto
-- Memoria final
-- README y documentación
-
-## Entregables
-
-- Presentación
-- Memoria PDF
-- README final
-- Guion del vídeo
-
----
-
-# 🛠️ Tecnologías Utilizadas
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly
-- Jupyter Notebook
-
----
-
-# 📁 Estructura del Proyecto
-
-```text
-EDA_Vivienda_Espana/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_exploratory_analysis.ipynb
-│   └── 03_visualizations.ipynb
-│
-├── reports/
-│   └── figures/
-│
-├── docs/
+```
+EDA_Alquiler_Vivienda_Espana/
 │
 ├── src/
+│   ├── data/
+│   │     ├── processed/                      # Dataset limpio listo para análisis
+│   │     └── raw/                            # Dataset original sin modificar
+│   │ 
+│   ├── docs/   
+│   │ 
+│   ├── notebooks/
+│   │     ├── 01_data_cleaning.ipynb          # Limpieza y preparación de datos
+│   │     ├── 02_exploratory_analysis.ipynb   # Análisis univariante y bivariante
+│   │     └── 03_visualizations.ipynb         # Visualizaciones finales
+│   │ 
+│   └── img/                                # Gráficos exportados del análisis
 │
+├── .gitattributes
+├── .gitignore
+├── memoria_EDA.pdf
+├── presentación.pdf
 ├── README.md
-├── requirements.txt
-└── .gitignore
+└── requirements.txt
+
+```
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Python 3.10+**
+- **Pandas** — manipulación y análisis de datos
+- **NumPy** — operaciones numéricas
+- **Matplotlib** — visualizaciones base
+- **Seaborn** — visualizaciones estadísticas
+- **Plotly** — gráficos interactivos
+- **Jupyter Notebook** — entorno de desarrollo
+
+---
+
+## 👥 Equipo y División del Trabajo
+
+| Persona | Rol | Responsabilidades |
+|---------|-----|-------------------|
+| Nil Coronado| Data Acquisition & Cleaning | Carga del dataset, limpieza, data dictionary |
+| Enrique Algarra | EDA & Visualización | Análisis exploratorio, gráficos, heatmaps |
+| Lucía Vetrano| Business Insights & Storytelling | Conclusiones, memoria del proyecto , presentación, vídeo |
+
+---
