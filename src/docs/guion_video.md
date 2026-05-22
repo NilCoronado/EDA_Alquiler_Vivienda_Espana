@@ -1,6 +1,4 @@
 # Guion del Vídeo — EDA Alquiler Vivienda España
-## Duración total: 7 minutos
-
 ---
 
 ## REPARTO DE TIEMPO
