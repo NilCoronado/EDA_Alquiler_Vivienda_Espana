@@ -82,20 +82,23 @@ EDA_Alquiler_Vivienda_Espana/
 │   │     ├── processed/                      # Dataset limpio listo para análisis
 │   │     └── raw/                            # Dataset original sin modificar
 │   │ 
-│   ├── docs/   
+│   ├── docs/                                 # Documentos extras usados de apoyo en las tareas
 │   │ 
+│   │
+│   ├── img/                                  # Gráficos exportados del análisis
+│   │
 │   ├── notebooks/
 │   │     ├── 01_data_cleaning.ipynb          # Limpieza y preparación de datos
-│   │     ├── 02_exploratory_analysis.ipynb   # Análisis univariante y bivariante
-│   │     └── 03_visualizations.ipynb         # Visualizaciones finales
+│   │     └── 02_eda_analysis.ipynb           # Análisis univariante y bivariante
 │   │ 
-│   └── img/                                # Gráficos exportados del análisis
-│
-├── .gitattributes
-├── .gitignore
+│   └── utils/ 
+│ 
+├──.gitattributes
+├──.gitignore
+├── README.md
+├── main.ipynb
 ├── memoria_EDA.pdf
 ├── presentación.pdf
-├── README.md
 └── requirements.txt
 
 ```
@@ -108,8 +111,8 @@ EDA_Alquiler_Vivienda_Espana/
 - **NumPy** — operaciones numéricas
 - **Matplotlib** — visualizaciones base
 - **Seaborn** — visualizaciones estadísticas
-- **Plotly** — gráficos interactivos
 - **Jupyter Notebook** — entorno de desarrollo
+- **Canva** - slides para presentación
 
 ---
 
@@ -119,6 +122,6 @@ EDA_Alquiler_Vivienda_Espana/
 |---------|-----|-------------------|
 | Nil Coronado| Data Acquisition & Cleaning | Carga del dataset, limpieza, data dictionary |
 | Enrique Algarra | EDA & Visualización | Análisis exploratorio, gráficos, heatmaps |
-| Lucía Vetrano| Business Insights & Storytelling | Conclusiones, memoria del proyecto , presentación, guión del vídeo |
+| Lucía Vetrano| Business Insights & Storytelling | Main, memoria del proyecto , presentación, conclusiones, vídeo |
 
 ---
